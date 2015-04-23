@@ -31,7 +31,6 @@ angular.module('shortly', [
       controller: 'AuthController'
     })
 
-    //TODO .when('/738dd', 'http://www.google.com')
 
     .otherwise({redirectTo: '/links'})
     // We add our $httpInterceptor into the array

@@ -6,7 +6,8 @@
   <ul>
     <li ng-repeat="link in data.links">Title: {{ link.title }}
     <br>
-    Short link: <a class="link" href='{{ link.baseURL + "/#/" + link.code }}'>Click here</a>
+    Short link: <a class="link" href='{{ link.base_url + "/api/links/" + link.code }}'>Click here</a>
+
     <br>
     Number of Visits: {{link.visits}}
 

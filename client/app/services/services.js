@@ -13,6 +13,9 @@ angular.module('shortly.services', [])
   };
 
   var linkSetter = function (link) {
+    // check whether 404 error
+    // if 404, throw error messgae
+    // else, then do http post
     return $http({
       method: 'POST',
       url: '/api/links',
