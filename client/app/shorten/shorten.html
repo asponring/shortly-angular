@@ -1,8 +1,11 @@
 <div id='container'>
   <a href="/#/links" class="navigation">See links</a>
 <!-- Your code here -->
-<input ng-model="newLink">
-<button ng-click="addLink(newLink)" >Shorten Link</button>
+<form novalidate name="ourForm">
+<input ng-model="newLink" type="url" required="" name="url">
+<span ng-show="ourForm.url.$error.url">Not valid url</span>
+<button ng-click="addLink(newLink)" ng-disabled="ourForm.$invalid">Shorten Link</button>
+</form>
 </div>
 
 
