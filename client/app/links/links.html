@@ -4,7 +4,7 @@
   <br>
   Links
   <ul>
-    <li ng-repeat="link in data.links">Title: {{ link.title }}
+    <li ng-repeat="link in data.links | orderBy:'-visits'">Title: {{ link }}
     <br>
     Short link: <a class="link" href='{{ link.base_url + "/api/links/" + link.code }}'>Click here</a>
 
