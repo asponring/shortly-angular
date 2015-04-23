@@ -3,8 +3,11 @@
   <a href="/#/shorten" class="navigation">Go Shorten Something!</a>
   <br>
   Links
+  <br>
+
+  <input ng-model="query" type='search' name="search" placeholder="Filter by" autofocus>
   <ul>
-    <li ng-repeat="link in data.links | orderBy:'-visits'">Title: {{ link }}
+    <li ng-repeat="link in data.links | filter:query | orderBy:'-visits'">Title: {{ link.title }}
     <br>
     Short link: <a class="link" href='{{ link.base_url + "/api/links/" + link.code }}'>Click here</a>
 
