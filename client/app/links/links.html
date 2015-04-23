@@ -1,7 +1,13 @@
 <div id='container'>
   <!-- Your html here -->
-  Anything?
+  Links
   <ul>
-    <li ng-repeat="link in data.links">{{ link }}</li>
+    <li ng-repeat="link in data.links">Title: {{ link.title }}
+    <br>
+    Short link: <a href='{{ link.baseURL + link.code }}'>Click here</a>
+    <br>
+    Number of Visits: {{link.visits}}
+
+    </li>
   </ul>
 </div>
